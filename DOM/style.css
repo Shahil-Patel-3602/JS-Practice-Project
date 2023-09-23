@@ -1,0 +1,30 @@
+#bulb{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 4px solid black;
+    background-color: white;
+    position: relative;
+    align-items: center;
+    margin-left: 500px;
+    margin-top: 40px;
+}
+
+/* We can also use hover function of the CSS to On/Off the Bulb */
+/* #bulb:hover{
+} */
+
+#On{
+    font-size: 50px;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 600px;
+    padding: auto;
+}
+
+#Off{
+    font-size: 50px;
+    position: relative;
+    padding: auto;
+    margin-left: 120px; 
+}
