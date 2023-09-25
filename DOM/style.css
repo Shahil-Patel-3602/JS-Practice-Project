@@ -27,4 +27,27 @@
     position: relative;
     padding: auto;
     margin-left: 120px; 
+    display: flexbox;
+}
+
+h1{
+    font-size: 70px;
+    text-align: center;
+    display: flexbox;
+}
+
+div.box{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-color: salmon;
+    margin-left: 200px;
+}
+
+h3{
+    font-size: 40px;
+    color: blue;
+    display: flex;
+    padding: 30px;
+    text-align: justify;
 }

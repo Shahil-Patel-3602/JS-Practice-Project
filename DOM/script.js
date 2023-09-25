@@ -58,3 +58,27 @@ OnBtn.addEventListener("click", function(){
 // OffBtn.addEventListener("click", function(){
 //     bulb.style.backgroundColor = "white";
 // });
+
+
+// Using querySelectorAll
+var h = document.querySelectorAll("h1");
+// console.log(h);
+
+h.forEach(function (e) {
+    e.addEventListener('mouseover', function(){
+        e.style.color = "red";
+    });
+    e.addEventListener('mouseleave', function(){
+        e.style.color = "black";
+    });
+});
+
+var divBox = document.getElementsByClassName('box');
+
+// Div Box may have multiple elements, so we use index, divBox[0]
+divBox[0].addEventListener('click', function(){
+    divBox[0].style.backgroundColor = "yellow";
+});
+
+divBox[0].innerHTML = "<h3>Hello World</h3>";
+// divBox[0].textContent = "<h3>Hello World</h3>";
