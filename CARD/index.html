@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        .card{
+            width: 450px;
+            background-color: #464D77;
+            border-radius: 45px;
+            border: 3px solid black;
+            padding: 40px;
+            align-items: center;
+            margin: 50px auto;
+        }
+        .card img {
+            height: 370px;
+            width: 420px;
+            position: sticky;
+            align-items: center;
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 45px;
+            border: 3px solid black;
+            box-shadow: 8px 8px #F9DB6D;
+        }
+
+        .animalButtons{
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+
+        .animalButtons button{
+            background-color: #F4EDED;
+            border-radius: 20px;
+            margin: 5px;
+            border: 0.5px solid rgb(250, 7, 250);
+            cursor: pointer;
+            width: 75px;
+            height: 40px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .topping{
+            margin-left: 15px;
+        }
+
+        .topping p{
+            color: #F49097;
+            text-align: justify;
+        }
+        .readMore{
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 20px;
+            color: blueviolet;
+            font-weight: 200;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+    /* Add hover method to the buttons and color changes on hovers and clicking */
+        .animalButtons button:hover{
+            background-color: #F49097;
+            color: #F4EDED;
+        }
+        .animalButtons button:active{
+            background-color: #55D6C2;
+            color: #F4EDED;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2022/6/16/1/shutterstock_1862856634.jpg.rend.hgtvcom.1280.853.suffix/1655430860853.jpeg"
+          alt="Dog" />
+
+        <div class="animalButtons">
+          <button>Dog</button>
+          <button>Cat</button>
+        </div>
+
+        <div class="topping">
+          <h2 style="color: #DFB2F4">Dog</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis laborum dolorum reprehenderit ad doloremque, tenetur tempora cum cupiditate nam suscipit ratione maxime commodi ea, expedita amet quod atque mollitia aut vero. Atque, necessitatibus sed voluptates voluptatum error illo saepe, perferendis ducimus itaque possimus quisquam ad.
+          </p>
+        </div>
+        <div class="readMore">
+          <a href="#">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
