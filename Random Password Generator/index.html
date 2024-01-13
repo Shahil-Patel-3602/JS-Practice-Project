@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/Password.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="semiMain">
+            <h1>Generate a <br> <span>Random Password</span></h1>
+            <div class="passwordImage">
+                <img src="images/Password.png" alt="">
+            </div>
+        </div>
+        
+        <div class="lengthSelector">
+            <label for="length">Length:</label>
+            <input type="number" name="length" id="length" min="8" max="20" value="8">
+        </div>
+
+        <div class="display">
+            <input type="text" id="Password"  placeholder="Password">
+            <img src="images/copy.png" onclick="copyPassword()">
+        </div>
+        
+
+        <button onclick="generatePassword()">
+            <img src="images/generate.png">
+            Generate Password
+        </button>
+        
+    </div>
+
+
+    <!-- Javascript logic to generate a random password -->
+    <script src="script.js"></script>
+</body>
+</html>

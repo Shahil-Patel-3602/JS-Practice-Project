@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #002339;
+    color: #fff;
+}
+
+.container{
+    margin: 12%;
+    width: 90%;
+    max-width: 700px;
+}
+
+.display{
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    background: #fff;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 26px 10px;
+    border-radius: 10px;
+    height: 60px;
+}
+
+.container h1{
+    font-size: 45px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.container h1 span{
+    color: #019f55;
+    border-bottom: 4px solid #019f55;
+    padding-bottom: 15px;
+}
+
+.display img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.display input{
+    border: 0;
+    outline: 0;
+    font-size: 24px;
+}
+
+.container button{
+    border: 0;
+    outline: 0;
+    background: #019f55;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 26px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 55px;
+}
+
+.container button img{
+    width: 28px;
+    margin-right: 10px;
+}
+
+.lengthSelector{
+    display: flex;
+    align-items: center;
+}
+.lengthSelector label{
+    font-size: 24px;
+    font-weight: 300;
+    margin-right: 5px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.lengthSelector input{
+    width: 80px;
+    height: 40px;
+    border: 0;
+    outline: 0;
+    font-size: 21px;
+    text-align: center;
+    border-radius: 6px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+
+.passwordImage img{
+    width: 85px;
+    height: 85px;
+}
+
+.semiMain{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
