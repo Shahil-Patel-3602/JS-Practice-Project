@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather-App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <!-- Search box will have a input box and a search icon -->
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button class="search-btn">
+                <img src="images/search.png" alt="search">
+            </button>
+        </div>
+
+        <!-- Error message -->
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+
+        <!-- Weather Details about the city -->
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temperature">22°C</h1>
+            <h2 class="city">New Delhi</h2>
+
+            <!-- Extra details: Wind Speed, humidity -->
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script for API call -->
+    <script>
+        const apiKey = "9d2e59f81823d7079ab5f0b6e07b2bc2";
+        const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+        
+        const searchBox = document.querySelector(".search input");
+        const searchButton = document.querySelector(".search button");
+
+        async function getWeatherByLocation(cityName) {
+            const response = await fetch(apiURL + cityName + `&appid=${apiKey}`);
+
+            // Check if the response is valid, in case of invalid response show the error message
+            if (response.status == 404) {
+                document.querySelector(".error").style.display = "block";
+                document.querySelector(".weather").style.display = "none";
+                return;
+            }
+            else{  
+                const respData = await response.json();
+                console.log(respData);
+                
+                // Get the city name, temperature, humidity and wind speed using query selector
+                document.querySelector(".city").innerHTML = respData.name;
+                document.querySelector(".temperature").innerHTML = `${Math.round(respData.main.temp)}°C`;
+                document.querySelector(".humidity").innerHTML = `${respData.main.humidity}%`;
+                document.querySelector(".wind").innerHTML = `${respData.wind.speed} km/h`;
+
+                // Updating the weather icon
+                const weatherIcon = document.querySelector(".weather-icon");
+                weatherIcon.src = "images/" + respData.weather[0].main + ".png";
+
+                // Clearing the input box
+                searchBox.value = "";
+                
+                // Initially the weather details will be hidden, so we will display it when the city name is entered and search button is clicked
+                document.querySelector(".weather").style.display = "block";
+                document.querySelector(".error").style.display = "none";
+            }
+        }
+        // On clicking the search button the getWeatherByLocation function will be called with the city name as the parameter
+        searchButton.addEventListener("click", () => {
+            const cityName = searchBox.value;
+            getWeatherByLocation(cityName);
+        });
+    </script>
+</body>
+</html>
