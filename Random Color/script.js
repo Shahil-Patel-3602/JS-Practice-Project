@@ -12,6 +12,14 @@ const getRandomColor = () => {
 // Create array of boxes
 let boxesArray = Array.from(boxes);
 boxesArray.forEach(box => {
+
+    // Will change color every second
+    setInterval(() => {
+        box.style.backgroundColor = getRandomColor();
+        box.style.color = getRandomColor();
+    }, 150);
+    
+    // Will change color only when the page is refreshed
     box.style.backgroundColor = getRandomColor();
     box.style.color = getRandomColor();
 });
